@@ -1,5 +1,0 @@
-2026-02-22 22:18:50,076 | In file: main.py, Function: <module>, Line: 11  | INFO | Everything is info
-2026-02-22 22:18:50,076 | In file: main.py, Function: <module>, Line: 12  | DEBUG | Everything is debug
-2026-02-22 22:18:50,076 | In file: main.py, Function: <module>, Line: 13  | WARNING | Everything is warning
-2026-02-22 22:18:50,076 | In file: main.py, Function: <module>, Line: 14  | ERROR | Everything is error
-2026-02-22 22:18:50,076 | In file: main.py, Function: <module>, Line: 15  | CRITICAL | Everything is critical
