@@ -5,6 +5,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 import json
 import re
 import base64
+import cairosvg
 
 
 HEADERS = {
@@ -96,7 +97,13 @@ def fetch_html(url: str):
     if url.startswith("http://"):
         url = url.replace("http://", "https://")
 
+    resolved = resolve_final_url(url)
+    if resolved != url:
+        print(f"  Pre-resolved redirect: {url} -> {resolved}")
+        url = resolved
+
     with sync_playwright() as p:
+
         browser = p.chromium.launch(headless=True)
         try:
             html = _try_fetch(browser, url)
@@ -110,8 +117,7 @@ def fetch_html(url: str):
                 "ERR_CONNECTION_TIMED_OUT",
                 "ERR_ADDRESS_UNREACHABLE",
                 "ERR_SSL_VERSION_OR_CIPHER_MISMATCH",
-                "ERR_NAME_NOT_RESOLVED",
-                "ERR_SSL_UNRECOGNIZED_NAME_ALERT"
+                "ERR_NAME_NOT_RESOLVED"
             )) and not parsed.netloc.startswith("www."):
                 www_url = f"{parsed.scheme}://www.{parsed.netloc}{parsed.path}"
                 print(f"  Retrying with www: {www_url}")
@@ -466,12 +472,37 @@ def download_logo(logo_url: str, filename: str, referer: str = None):
             f.write(svg_data)
         return
 
-    # First try with requests + referer (fast)
+    # Harvest cookies from the referer page so requests.Session is fully authenticated
+    harvested_cookies = {}
+    if referer:
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context(user_agent=HEADERS["User-Agent"])
+                page = context.new_page()
+                try:
+                    page.goto(referer, timeout=20000)
+                    page.wait_for_load_state("domcontentloaded", timeout=10000)
+                except Exception:
+                    pass
+                # ✅ Extract all cookies from the browser context
+                for cookie in context.cookies():
+                    harvested_cookies[cookie["name"]] = cookie["value"]
+                page.close()
+                context.close()
+                browser.close()
+        except Exception as e:
+            print(f"  Cookie harvest failed ({e}), continuing without cookies...")
+
+    # Try requests.Session with harvested cookies + referer header
     headers = {**HEADERS}
     if referer:
         headers["Referer"] = referer
     try:
         session = requests.Session()
+        # ✅ Inject harvested browser cookies into the requests session
+        for name, value in harvested_cookies.items():
+            session.cookies.set(name, value)
         response = session.get(logo_url, headers=headers, timeout=15, stream=True, allow_redirects=True)
         if response.status_code == 200:
             with open(filename, "wb") as f:
@@ -482,38 +513,56 @@ def download_logo(logo_url: str, filename: str, referer: str = None):
     except Exception as e:
         print(f"  requests download failed ({e}), trying Playwright...")
 
-    # Fallback: use Playwright to download (bypasses hotlink/bot protection)
+    # Fallback: Playwright context.request (CORS-free, shares browser cookies)
+    # Fallback: intercept the image by navigating to it within a real page context
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
             user_agent=HEADERS["User-Agent"],
             extra_http_headers={
-                "Referer": referer or logo_url,
                 "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
             }
         )
         try:
-            page = context.new_page()
-            # Navigate to referer page first to set cookies and context
+            # Visit referer first to establish cookies/session
             if referer:
+                page = context.new_page()
                 try:
                     page.goto(referer, timeout=20000)
                     page.wait_for_load_state("domcontentloaded", timeout=10000)
                 except Exception:
                     pass
+                finally:
+                    page.close()
 
-            # Now fetch the image via page.evaluate with fetch()
-            image_data = page.evaluate("""async (url) => {
-                const response = await fetch(url, {credentials: 'include'});
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const buffer = await response.arrayBuffer();
-                return Array.from(new Uint8Array(buffer));
-            }""", logo_url)
+            # ✅ Intercept the image response via routing — fires as a real browser sub-request
+            image_bytes = None
 
-            ext = "." + logo_url.rsplit(".", 1)[-1].split("?")[0].lower()
-            actual_filename = filename.rsplit(".", 1)[0] + ext
-            with open(actual_filename, "wb") as f:
-                f.write(bytes(image_data))
+            def handle_route(route, request):
+                response = route.fetch()  # fetched with full browser TLS fingerprint + cookies
+                nonlocal image_bytes
+                image_bytes = response.body()
+                route.fulfill(response=response)
+
+                page = context.new_page()
+                page.route(logo_url, handle_route)
+                try:
+                    # Navigate directly to the image URL — triggers the route handler
+                    page.goto(logo_url, timeout=20000)
+                    page.wait_for_load_state("domcontentloaded", timeout=10000)
+                except Exception:
+                    pass
+                finally:
+                    page.close()
+        
+                if not image_bytes:
+                    raise ValueError("No image bytes captured via route intercept")
+        
+                ext = "." + logo_url.rsplit(".", 1)[-1].split("?")[0].lower()
+                actual_filename = filename.rsplit(".", 1)[0] + ext
+                with open(actual_filename, "wb") as f:
+                    f.write(image_bytes)
+        
         finally:
             context.close()
             browser.close()

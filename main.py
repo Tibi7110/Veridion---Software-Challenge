@@ -47,7 +47,7 @@ if __name__ == "__main__":
     
     shutil.rmtree("logos")
     os.makedirs("logos", exist_ok=True)
-    domains = df["domain"].dropna().head(50).tolist()
+    domains = df["domain"].dropna().head(10).tolist()
 
     MAX_WORKERS = 8  # keep low — Playwright is memory-heavy (~150MB per browser)
 
