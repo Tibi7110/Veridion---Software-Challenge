@@ -2,11 +2,16 @@ import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor
 import os
 import shutil
+from pathlib import Path
+import time
+
 
 from utils.logs import *
 from etc import *
+from data.transform import *
 import yaml
 
 
@@ -43,16 +48,26 @@ def process_domain(domain: str) -> tuple[str, str | None, str | None]:
     except Exception as e:
         return domain, None, str(e)
     
-if __name__ == "__main__":
+def process_data(p):
+    print(f"Processing {p.name}...")
+    try:
+        result = process_logo(str(p))
+        return (p.stem, result, None)
+    except Exception as e:
+        return (p.stem, None, e)
+
     
+if __name__ == "__main__":
+
+    MAX_Threads = 50  # keep low — Playwright is memory-heavy (~150MB per browser)
+
     shutil.rmtree("logos")
     os.makedirs("logos", exist_ok=True)
-    domains = df["domain"].dropna().head(10).tolist()
-
-    MAX_WORKERS = 8  # keep low — Playwright is memory-heavy (~150MB per browser)
+    domains = df["domain"].dropna().head(125).tolist()
 
     results = []
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    start = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=MAX_Threads) as executor:
         futures = {executor.submit(process_domain, domain): domain for domain in domains}
 
         for future in as_completed(futures):
@@ -65,7 +80,56 @@ if __name__ == "__main__":
                 print(f"⚠️  {domain}: No logo found")
             results.append({"domain": domain, "logo_url": logo_url, "error": error})
 
+    end = time.perf_counter()
+    print(f"Total time: {end - start:.3f} seconds")
     # Save results summary
-    results_df = pd.DataFrame(results)
-    results_df.to_csv("logo_results.csv", index=False)
     print(f"\nDone. {sum(1 for r in results if r['logo_url'])} logos found out of {len(results)}")
+    
+
+    shutil.rmtree("logos2", ignore_errors=True)
+    os.makedirs("logos2", exist_ok=True)
+
+    shutil.rmtree("/home/tibi/Proiecte/Veridion/logos2")
+    os.makedirs("logos2", exist_ok=True)
+    folder = Path("/home/tibi/Proiecte/Veridion/logos")
+    output_folder = Path("/home/tibi/Proiecte/Veridion/logos2")
+    valid_ext = {".png", ".jpg", ".jpeg", ".svg"}
+
+    # --- 1. Process & cache all logos ---
+    processed = {}
+    MAX_CPUS = 8
+    files = [p for p in folder.iterdir() if p.suffix.lower() in valid_ext]
+    with ProcessPoolExecutor(max_workers=MAX_CPUS) as executor:
+        futures = {executor.submit(process_data, p): p for p in files}
+
+        for future in as_completed(futures):
+            stem, result, err = future.result()
+
+            if err:
+                print(f"SKIPPED: {stem} — {err}")
+                continue
+
+            processed[stem] = result
+
+    save_debug_masks(processed, output_folder, n=len(processed))
+
+    # --- 2. Compare all pairs ---
+    stems = list(processed.keys())
+    results = []
+
+    print("\n--- ALL PAIRS DEBUG ---")
+    for i in range(len(stems)):
+        for j in range(i + 1, len(stems)):
+            name1, name2 = stems[i], stems[j]
+            p1, p2 = processed[name1], processed[name2]
+            bw1 = resize_bw(p1["bw"])
+            bw2 = resize_bw(p2["bw"])
+            mse     = compute_normalized_mse(bw1, bw2)
+            hamming = hamming_distance(p1["phash"], p2["phash"])
+            similar  = hamming < 10 and mse < 0.2
+            if similar:
+                results.append((name1, name2, hamming, mse))
+                print(f"  SIMILAR: {name1} <-> {name2} | hamming={hamming} | mse={mse:.2f}")
+
+    print(f"\nDone. Found {len(results)} similar pairs out of {len(stems)*(len(stems)-1)//2} total.")
+

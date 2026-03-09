@@ -299,18 +299,7 @@ def extract_logo(url: str) -> str | None:
             url = canonical  # update base URL but don't re-fetch
 
 
-    # 1. og:image meta tag
-    og = soup.find("meta", property="og:image")
-    if og and og.get("content"):
-        content = og["content"]
-        if isinstance(content, list):
-            content = content[0]
-        candidate = absolute_url(url, content)
-        if candidate and is_url_accessible(candidate, referer=url):
-            return candidate
-        print(f"  og:image not accessible ({candidate}), trying next strategy...")
-
-    # 2. <img> tags scored by logo-related attributes
+    # 1. <img> tags scored by logo-related attributes
     logo_candidates = []
     for img in soup.find_all("img"):
         score = 0
@@ -336,6 +325,18 @@ def extract_logo(url: str) -> str | None:
         if candidate and is_url_accessible(candidate, referer=url):
             return candidate
         print(f"  img candidate not accessible ({candidate}), skipping...")
+
+    # 2. og:image meta tag
+    og = soup.find("meta", property="og:image")
+    if og and og.get("content"):
+        content = og["content"]
+        if isinstance(content, list):
+            content = content[0]
+        candidate = absolute_url(url, content)
+        if candidate and is_url_accessible(candidate, referer=url):
+            return candidate
+        print(f"  og:image not accessible ({candidate}), trying next strategy...")
+
 
     # 3. CSS background-image containing "logo"
     css_logo = extract_logo_from_css(soup, url)
@@ -433,9 +434,9 @@ def fix_malformed_redirect(url: str, original_url: str) -> str:
     # Detect if the netloc has a known TLD fused with a path segment
     # e.g. "www.astrazeneca.uaetc" -> host is "www.astrazeneca.ua", leaked path is "etc"
     # Strategy: find the real host by matching known TLD boundary
-    tld_pattern = re.compile(
-        r'^((?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6})([a-zA-Z0-9].*)$'
-    )
+    #tld_pattern = re.compile(
+    #    r'^((?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6})([a-zA-Z0-9].*)$'
+    #)
 
     # Check if netloc ends with a valid TLD or has garbage fused on
     # We'll try to split at the TLD boundary using the original host as a hint
