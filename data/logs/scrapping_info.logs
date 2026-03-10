@@ -1,0 +1,28 @@
+2026-03-10 18:48:16,953 | In file: main.py, Function: extractData, Line: 38 | ERROR | plameco-hannover.de: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.plameco-hannover.de/
+Call log:
+  - navigating to "https://www.plameco-hannover.de/", waiting until "load"
+
+2026-03-10 18:48:16,983 | In file: main.py, Function: extractData, Line: 38 | ERROR | toyota-buchreiter-eisenstadt.at: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.toyota-buchreiter-eisenstadt.at/
+Call log:
+  - navigating to "https://www.toyota-buchreiter-eisenstadt.at/", waiting until "load"
+
+2026-03-10 18:48:17,411 | In file: main.py, Function: extractData, Line: 38 | ERROR | ibc-solar.jp: Failed to load page: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://ibc-solar.jp/
+Call log:
+  - navigating to "https://ibc-solar.jp/", waiting until "load"
+
+2026-03-10 18:48:20,802 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: wurth-international.com: None
+2026-03-10 18:48:22,435 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: ovb.ro: None
+2026-03-10 18:48:24,026 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: autosecuritas-ct-seysses.fr: None
+2026-03-10 18:48:24,567 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: mazda-autohaus-hellwig-hoyerswerda.de: None
+2026-03-10 18:48:25,256 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: crocs.com.uy: None
+2026-03-10 18:48:25,360 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: astrazeneca.ua: None
+2026-03-10 18:48:26,452 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: ymcasteuben.org: None
+2026-03-10 18:48:26,796 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: greatplacetowork.com.bo: None
+2026-03-10 18:48:28,092 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: ebay.cn: None
+2026-03-10 18:48:28,490 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: ccusa.co.nz: None
+2026-03-10 18:48:28,898 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: nobleprog.mx: None
+2026-03-10 18:48:32,116 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: engie.co.uk: None
+2026-03-10 18:48:39,813 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: stanbicbank.co.zw: None
+2026-03-10 18:48:48,989 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: lidl.com.cy: None
+2026-03-10 18:48:58,081 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: tupperware.at: None
+2026-03-10 18:49:38,392 | In file: main.py, Function: extractData, Line: 40 | INFO | OK: kia-moeller-wunstorf.de: None
