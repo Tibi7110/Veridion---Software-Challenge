@@ -1,4 +1,4 @@
-from data.transform import process_logo
+from scripts.transform import process_logo
 
 def processLogos(p):
     print(f"Processing {p.name}...")

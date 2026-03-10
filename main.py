@@ -1,20 +1,18 @@
-import numpy as np
-import pandas as pd
-import pyarrow.parquet as pq
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from concurrent.futures import ProcessPoolExecutor
-import os
+import logging
 import shutil
-from pathlib import Path
+import os
 import time
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+from pathlib import Path
 
-
-from data.logs import *
-from etc import *
-from data.transform import *
-from utils import *
+import pyarrow.parquet as pq
 import yaml
 
+from scripts.transform import save_debug_masks
+from utils.logs import setup_logging
+from utils.proccessDomain import process_domain
+from utils.comparePairs import comparePairs
+from utils.processLogos import processLogos
 
 filename = "./data/logos.snappy.parquet"
 df = pq.read_table(filename).to_pandas()
@@ -25,9 +23,9 @@ def extractData():
     os.makedirs(config['extract_folder'], exist_ok=True)
     ####
 
-    domains = df["domain"].dropna().head(20).tolist()
+    domains = df["domain"].dropna().head(125).tolist()
     results = []
-    ###
+    ####
     setup_logging(config['scrapping_path'])
     with ThreadPoolExecutor(max_workers=config['MAX_Threads']) as executor:
         futures = {executor.submit(process_domain, domain): domain for domain in domains}
@@ -48,12 +46,13 @@ def extractData():
 
 def proccesData(folder: Path, output_folder: Path):
 
-    # --- 1. Process & cache all logos ---
+    # 1. Process & cache all logos
     MAX_CPUS = config['MAX_CPUS']
     processed = {}
     valid_ext = {".png", ".jpg", ".jpeg", ".svg"}
-    ###
-    files = [p for p in folder.iterdir() if p.suffix.lower() in valid_ext]
+    ####
+    #files = [p for p in folder.iterdir() if p.suffix.lower() in valid_ext]
+    files = [p for p in folder.iterdir() if p.suffix.lower()]
     with ProcessPoolExecutor(max_workers=MAX_CPUS) as executor:
         futures = {executor.submit(processLogos, p): p for p in files}
 
@@ -68,10 +67,8 @@ def proccesData(folder: Path, output_folder: Path):
 
     save_debug_masks(processed, output_folder, n=len(processed))
 
-    # --- 2. Compare all pairs ---
-    with ProcessPoolExecutor(max_workers=MAX_CPUS) as executor:
-        future = executor.submit(comparePairs, processed)
-        results, stems = future.result() 
+    # 2. Compare all pairs
+    results, stems = comparePairs(processed)
 
     logging.info(f"\nDone. Found {len(results)} similar pairs out of {len(stems)*(len(stems)-1)//2} total.")
 
@@ -95,6 +92,8 @@ if __name__ == "__main__":
     proccesData(folder=Path(config['extract_folder']), output_folder=Path(config['transform_folder']))
 
     timeToProcess = time.perf_counter()
+
+    file.close()
 
     print(f"Time scrapping: {timeToScrape - start:.3f} seconds")
     print(f"Total time: {timeToProcess - timeToScrape:.3f} seconds")

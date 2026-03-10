@@ -1,4 +1,4 @@
-from etc import *
+from scripts import resolve_final_url, extract_logo,download_logo
 
 def process_domain(domain: str) -> tuple[str, str | None, str | None]:
     """Returns (domain, logo_url, error)"""
@@ -7,7 +7,7 @@ def process_domain(domain: str) -> tuple[str, str | None, str | None]:
         website = resolve_final_url(website)
         logo_url = extract_logo(website)
         if logo_url:
-            filename = f"logos/{domain.replace('.', '_')}.png"
+            filename = f"tmp/extract/{domain.replace('.', '_')}.png"
             download_logo(logo_url, filename)
             return domain, logo_url, None
         else:
