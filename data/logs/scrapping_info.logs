@@ -1,142 +1,167 @@
-2026-03-11 01:30:39,658 | In file: main.py, Function: extractData, Line: 36 | ERROR | plameco-hannover.de: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.plameco-hannover.de/
+2026-03-12 00:02:29,120 | In file: main.py, Function: extractData, Line: 33 | ERROR | plameco-hannover.de: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.plameco-hannover.de/
 Call log:
   - navigating to "https://www.plameco-hannover.de/", waiting until "load"
 
-2026-03-11 01:30:39,673 | In file: main.py, Function: extractData, Line: 36 | ERROR | toyota-buchreiter-eisenstadt.at: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.toyota-buchreiter-eisenstadt.at/
+2026-03-12 00:02:29,229 | In file: main.py, Function: extractData, Line: 33 | ERROR | toyota-buchreiter-eisenstadt.at: Failed to load page (www fallback also failed): Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.toyota-buchreiter-eisenstadt.at/
 Call log:
   - navigating to "https://www.toyota-buchreiter-eisenstadt.at/", waiting until "load"
 
-2026-03-11 01:30:40,625 | In file: main.py, Function: extractData, Line: 36 | ERROR | ibc-solar.jp: Failed to load page: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://ibc-solar.jp/
+2026-03-12 00:02:30,087 | In file: main.py, Function: extractData, Line: 33 | ERROR | ibc-solar.jp: Failed to load page: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://ibc-solar.jp/
 Call log:
   - navigating to "https://ibc-solar.jp/", waiting until "load"
 
-2026-03-11 01:30:44,243 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: wurth-international.com: None
-2026-03-11 01:30:45,827 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: freseniusmedicalcare.ca: None
-2026-03-11 01:30:46,647 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ymcasteuben.org: None
-2026-03-11 01:30:48,190 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: astrazeneca.ua: None
-2026-03-11 01:30:48,354 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: nobleprog.mx: None
-2026-03-11 01:30:48,625 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: affidea.ba: None
-2026-03-11 01:30:48,674 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: autosecuritas-ct-seysses.fr: None
-2026-03-11 01:30:49,444 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ovb.ro: None
-2026-03-11 01:30:49,460 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: spitex-wasseramt.ch: None
-2026-03-11 01:30:50,110 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: zalando.cz: None
-2026-03-11 01:30:51,092 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: greatplacetowork.com.bo: None
-2026-03-11 01:30:51,809 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bakertilly.lu: None
-2026-03-11 01:30:51,949 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: crocs.com.uy: None
-2026-03-11 01:30:52,782 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ebayglobalshipping.com: None
-2026-03-11 01:30:54,391 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: synlab.com.tr: None
-2026-03-11 01:30:55,918 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ccusa.co.nz: None
-2026-03-11 01:30:56,107 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: kia-moeller-wunstorf.de: None
-2026-03-11 01:30:56,395 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-hellwig-hoyerswerda.de: None
-2026-03-11 01:30:56,398 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: cafelasmargaritas.es: None
-2026-03-11 01:30:58,003 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: europa-union-sachsen-anhalt.de: None
-2026-03-11 01:30:59,102 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: veolia.com.ru: None
-2026-03-11 01:30:59,178 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: renault-tortosa.es: None
-2026-03-11 01:30:59,496 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: baywa-re.es: None
-2026-03-11 01:30:59,502 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: avis.cr: None
-2026-03-11 01:31:03,183 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: stanbicbank.co.zw: None
-2026-03-11 01:31:03,540 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: oil-testing.de: None
-2026-03-11 01:31:03,597 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: unicharm.com.br: None
-2026-03-11 01:31:03,333 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: deheus.com.vn: None
-2026-03-11 01:31:03,409 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcoanaheim.net: None
-2026-03-11 01:31:03,472 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcoseguin.com: None
-2026-03-11 01:31:04,039 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: julis-sh.de: None
-2026-03-11 01:31:04,644 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: allianz.nl: None
-2026-03-11 01:31:05,072 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: berlitz-augsburg.de: None
-2026-03-11 01:31:05,094 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: pirtek.be: None
-2026-03-11 01:31:05,142 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcoconyersga.com: None
-2026-03-11 01:31:06,069 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-kaschmieder-waren.de: None
-2026-03-11 01:31:06,142 | In file: main.py, Function: extractData, Line: 36 | ERROR | avoncameroun.com: Failed to load page: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://avoncameroun.com/
+2026-03-12 00:02:33,980 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: kia-moeller-wunstorf.de: None
+2026-03-12 00:02:34,165 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: wurth-international.com: None
+2026-03-12 00:02:32,276 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: freseniusmedicalcare.ca: None
+2026-03-12 00:02:33,422 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: synlab.com.tr: None
+2026-03-12 00:02:33,698 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ovb.ro: None
+2026-03-12 00:02:34,932 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: affidea.ba: None
+2026-03-12 00:02:35,069 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: autosecuritas-ct-seysses.fr: None
+2026-03-12 00:02:35,773 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: astrazeneca.ua: None
+2026-03-12 00:02:35,859 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: spitex-wasseramt.ch: None
+2026-03-12 00:02:36,335 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: cafelasmargaritas.es: None
+2026-03-12 00:02:36,694 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ymcasteuben.org: None
+2026-03-12 00:02:38,070 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: greatplacetowork.com.bo: None
+2026-03-12 00:02:38,104 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: zalando.cz: None
+2026-03-12 00:02:39,247 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: crocs.com.uy: None
+2026-03-12 00:02:39,281 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bakertilly.lu: None
+2026-03-12 00:02:39,927 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: nobleprog.mx: None
+2026-03-12 00:02:41,787 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ebayglobalshipping.com: None
+2026-03-12 00:02:43,236 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: veolia.com.ru: None
+2026-03-12 00:02:43,426 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: baywa-re.es: None
+2026-03-12 00:02:44,270 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: europa-union-sachsen-anhalt.de: None
+2026-03-12 00:02:44,448 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: avis.cr: None
+2026-03-12 00:02:44,705 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ccusa.co.nz: None
+2026-03-12 00:02:45,509 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: renault-tortosa.es: None
+2026-03-12 00:02:46,691 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: deheus.com.vn: None
+2026-03-12 00:02:46,710 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: menschenfuermenschen.at: None
+2026-03-12 00:02:46,779 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcoanaheim.net: None
+2026-03-12 00:02:47,863 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: julis-sh.de: None
+2026-03-12 00:02:48,454 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: unicharm.com.br: None
+2026-03-12 00:02:49,142 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-hellwig-hoyerswerda.de: None
+2026-03-12 00:02:49,245 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: oil-testing.de: None
+2026-03-12 00:02:50,130 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-kaschmieder-waren.de: None
+2026-03-12 00:02:50,314 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: berlitz-augsburg.de: None
+2026-03-12 00:02:50,391 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: stanbicbank.co.zw: None
+2026-03-12 00:02:50,407 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: allianz.nl: None
+2026-03-12 00:02:51,340 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcoseguin.com: None
+2026-03-12 00:02:51,422 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: pirtek.be: None
+2026-03-12 00:02:51,485 | In file: main.py, Function: extractData, Line: 33 | ERROR | avoncameroun.com: Failed to load page: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://avoncameroun.com/
 Call log:
   - navigating to "https://avoncameroun.com/", waiting until "load"
 
-2026-03-11 01:31:06,549 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: menschenfuermenschen.at: None
-2026-03-11 01:31:06,969 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: xella-colloquium.berlin: None
-2026-03-11 01:31:07,160 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: rsmpoland.pl: None
-2026-03-11 01:31:08,110 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bakertilly.es: None
-2026-03-11 01:31:08,669 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bmw-motorrad-euromotos-lyon.fr: None
-2026-03-11 01:31:09,510 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: svnefird.com: None
-2026-03-11 01:31:10,325 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bauder.lt: None
-2026-03-11 01:31:10,589 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-lackmann-sendenhorst.de: None
-2026-03-11 01:31:11,330 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mateco.nl: None
-2026-03-11 01:31:11,838 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazdaofamarillo.com: None
-2026-03-11 01:31:11,843 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: wurthsaudi.com: None
-2026-03-11 01:31:13,192 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: svntrinity.com: None
-2026-03-11 01:31:13,285 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ebay.cn: None
-2026-03-11 01:31:13,425 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: menicon.de: None
-2026-03-11 01:31:14,683 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: trinkgutlippstadt.de: None
-2026-03-11 01:31:14,835 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: secureparkinghi.com: None
-2026-03-11 01:31:15,512 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: orient-food.sk: None
-2026-03-11 01:31:15,636 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: lidl.com.cy: None
-2026-03-11 01:31:15,678 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: williamblairfunds.com: None
-2026-03-11 01:31:16,188 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: linde-gas.fi: None
-2026-03-11 01:31:17,983 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-poznan-voyager.pl: None
-2026-03-11 01:31:18,982 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: equans.hu: None
-2026-03-11 01:31:19,399 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: rheine.schule: None
-2026-03-11 01:31:19,420 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ford.pl.ua: None
-2026-03-11 01:31:20,007 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-roessel-birkenau.de: None
-2026-03-11 01:31:20,327 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: avia.ch: None
-2026-03-11 01:31:20,797 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: linexps.com: None
-2026-03-11 01:31:21,119 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: kia-suedmobile-radolfzell.de: None
-2026-03-11 01:31:21,396 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-wassing-ahaus-wuellen.de: None
-2026-03-11 01:31:21,809 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: zkteco.vn: None
-2026-03-11 01:31:22,219 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: kapanfastigheter.se: None
-2026-03-11 01:31:22,565 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: tupperware.at: None
-2026-03-11 01:31:24,249 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: intertongn.es: None
-2026-03-11 01:31:25,080 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-henseler-schwedt.de: None
-2026-03-11 01:31:26,313 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: ibc-solar.pl: None
-2026-03-11 01:31:26,464 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: adecco.cl: None
-2026-03-11 01:31:26,861 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: cdviberica.com: None
-2026-03-11 01:31:27,935 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: zalando.dk: None
-2026-03-11 01:31:28,793 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bioderma.co.za: None
-2026-03-11 01:31:28,847 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: crocs.co.id: None
-2026-03-11 01:31:28,976 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: toyotanatas.com.tr: None
-2026-03-11 01:31:28,988 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: bbraun.rs: None
-2026-03-11 01:31:29,207 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcodelran.com: None
-2026-03-11 01:31:29,561 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: renaultsanzhispano.es: None
-2026-03-11 01:31:29,891 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: daikinkuwait.com: None
-2026-03-11 01:31:30,069 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: worldvision.ca: None
-2026-03-11 01:31:30,733 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: wurth.co: None
-2026-03-11 01:31:31,230 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: kalyanmachines.com: None
-2026-03-11 01:31:31,391 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: engie.co.uk: None
-2026-03-11 01:31:31,653 | In file: main.py, Function: extractData, Line: 36 | ERROR | linexofschererville.com: Failed to load page: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://linexofschererville.com/
+2026-03-12 00:02:51,536 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: xella-colloquium.berlin: None
+2026-03-12 00:02:52,001 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcoconyersga.com: None
+2026-03-12 00:02:52,303 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: wurthsaudi.com: None
+2026-03-12 00:02:52,718 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: rsmpoland.pl: None
+2026-03-12 00:02:54,313 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bmw-motorrad-euromotos-lyon.fr: None
+2026-03-12 00:02:55,552 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: svnefird.com: None
+2026-03-12 00:02:55,642 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mateco.nl: None
+2026-03-12 00:02:56,007 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bauder.lt: None
+2026-03-12 00:02:56,510 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazdaofamarillo.com: None
+2026-03-12 00:02:59,362 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: trinkgutlippstadt.de: None
+2026-03-12 00:02:59,468 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: secureparkinghi.com: None
+2026-03-12 00:03:00,452 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-lackmann-sendenhorst.de: None
+2026-03-12 00:03:00,946 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: svntrinity.com: None
+2026-03-12 00:03:00,960 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: menicon.de: None
+2026-03-12 00:03:01,307 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: linde-gas.fi: None
+2026-03-12 00:03:01,334 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: williamblairfunds.com: None
+2026-03-12 00:03:01,441 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: orient-food.sk: None
+2026-03-12 00:03:02,754 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-poznan-voyager.pl: None
+2026-03-12 00:03:02,849 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: rheine.schule: None
+2026-03-12 00:03:01,983 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: equans.hu: None
+2026-03-12 00:03:02,779 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-roessel-birkenau.de: None
+2026-03-12 00:03:03,266 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: lidl.com.cy: None
+2026-03-12 00:03:03,800 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-wassing-ahaus-wuellen.de: None
+2026-03-12 00:03:04,057 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: kia-suedmobile-radolfzell.de: None
+2026-03-12 00:03:04,271 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: avia.ch: None
+2026-03-12 00:03:04,834 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: kapanfastigheter.se: None
+2026-03-12 00:03:04,861 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: linexps.com: None
+2026-03-12 00:03:05,078 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bioderma.co.za: None
+2026-03-12 00:03:06,269 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: zkteco.vn: None
+2026-03-12 00:03:09,421 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: tupperware.at: None
+2026-03-12 00:03:10,259 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-henseler-schwedt.de: None
+2026-03-12 00:03:11,069 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bakertilly.es: None
+2026-03-12 00:03:11,583 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcodelran.com: None
+2026-03-12 00:03:12,459 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: zalando.dk: None
+2026-03-12 00:03:12,562 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ibc-solar.pl: None
+2026-03-12 00:03:12,865 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: adecco.cl: None
+2026-03-12 00:03:13,918 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: cdviberica.com: None
+2026-03-12 00:03:14,865 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: toyotanatas.com.tr: None
+2026-03-12 00:03:15,570 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: bbraun.rs: None
+2026-03-12 00:03:15,610 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: wurth.co: None
+2026-03-12 00:03:15,718 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: renaultsanzhispano.es: None
+2026-03-12 00:03:15,990 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: worldvision.ca: None
+2026-03-12 00:03:16,509 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: daikinkuwait.com: None
+2026-03-12 00:03:18,050 | In file: main.py, Function: extractData, Line: 33 | ERROR | linexofschererville.com: Failed to load page: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://linexofschererville.com/
 Call log:
   - navigating to "https://linexofschererville.com/", waiting until "load"
 
-2026-03-11 01:31:32,272 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: spitex-regionbirs.ch: None
-2026-03-11 01:31:33,391 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda.de: None
-2026-03-11 01:31:34,694 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: pkf-hk.com: None
-2026-03-11 01:31:35,612 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcobloomfield.com: None
-2026-03-11 01:31:37,091 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: compo.de: None
-2026-03-11 01:31:37,130 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: einhell.ba: None
-2026-03-11 01:31:38,214 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: pingusenglish.com.tr: None
-2026-03-11 01:31:39,156 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: linde-electronics.com: None
-2026-03-11 01:31:39,602 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: pingusenglish.com.tr: None
-2026-03-11 01:31:39,801 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: flashbay.ca: None
-2026-03-11 01:31:40,669 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcosalemor.com: None
-2026-03-11 01:31:40,976 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: renaultmerida.com.mx: None
-2026-03-11 01:31:41,248 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: aamcowilliamsportpa.com: None
-2026-03-11 01:31:41,726 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: savethechildren.ca: None
-2026-03-11 01:31:41,762 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: cvjm-pfalz.de: None
-2026-03-11 01:31:42,000 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: tbwa.co.za: None
-2026-03-11 01:31:42,366 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: webster.nl: None
-2026-03-11 01:31:42,569 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: mazda-autohaus-hansmann-kassel.de: None
-2026-03-11 01:31:43,950 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: medef-alsace.com: None
-2026-03-11 01:31:44,168 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: subaru.jp: None
-2026-03-11 01:31:45,130 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: peugeot.sk: None
-2026-03-11 01:31:45,669 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: intersport-rent.fr: None
-2026-03-11 01:31:46,894 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: siebtechnik-tema.cn: None
-2026-03-11 01:31:46,921 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: engie.pt: None
-2026-03-11 01:31:48,057 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: besins-healthcare.se: None
-2026-03-11 01:31:49,569 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: esseskincare.sg: None
-2026-03-11 01:31:49,571 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: subaru.nc: None
-2026-03-11 01:31:49,766 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: daikin.ge: None
-2026-03-11 01:31:50,156 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: santillana.com.hn: None
-2026-03-11 01:31:50,429 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: daikin.com.sg: None
-2026-03-11 01:31:50,901 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: linde-gas.at: None
-2026-03-11 01:31:59,966 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: nestle.com.vn: None
-2026-03-11 01:32:16,919 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: veolia.fr: None
-2026-03-11 01:32:30,151 | In file: main.py, Function: extractData, Line: 38 | INFO | OK: allianz-kuhlemann.de: None
-2026-03-11 01:35:33,251 | In file: main.py, Function: extractData, Line: 36 | ERROR | noiseassessments.org: Failed to load page: Page.content: Unable to retrieve content because the page is navigating and changing the content.
-2026-03-11 01:35:33,255 | In file: main.py, Function: extractData, Line: 44 | INFO | 
-Done. 119 logos found out of 125
+2026-03-12 00:03:18,076 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcobloomfield.com: None
+2026-03-12 00:03:18,489 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: ebay.cn: None
+2026-03-12 00:03:18,525 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: spitex-regionbirs.ch: None
+2026-03-12 00:03:18,702 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: kalyanmachines.com: None
+2026-03-12 00:03:19,743 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-hansmann-kassel.de: None
+2026-03-12 00:03:22,245 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda.de: None
+2026-03-12 00:03:23,006 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: pkf-hk.com: None
+2026-03-12 00:03:23,040 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: compo.de: None
+2026-03-12 00:03:23,234 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcosalemor.com: None
+2026-03-12 00:03:25,224 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: engie.co.uk: None
+2026-03-12 00:03:25,232 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: webster.nl: None
+2026-03-12 00:03:25,940 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: einhell.ba: None
+2026-03-12 00:03:26,572 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: linde-electronics.com: None
+2026-03-12 00:03:26,622 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: flashbay.ca: None
+2026-03-12 00:03:26,770 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: savethechildren.ca: None
+2026-03-12 00:03:28,287 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcowilliamsportpa.com: None
+2026-03-12 00:03:28,803 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: cvjm-pfalz.de: None
+2026-03-12 00:03:29,307 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: tbwa.co.za: None
+2026-03-12 00:03:29,430 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: renaultmerida.com.mx: None
+2026-03-12 00:03:29,839 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: subaru.jp: None
+2026-03-12 00:03:30,675 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: pingusenglish.com.tr: None
+2026-03-12 00:03:31,221 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: pingusenglish.com.tr: None
+2026-03-12 00:03:31,491 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: esseskincare.sg: None
+2026-03-12 00:03:31,996 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: daikin.com.sg: None
+2026-03-12 00:03:32,201 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: allianz-kuhlemann.de: None
+2026-03-12 00:03:32,533 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: peugeot.sk: None
+2026-03-12 00:03:32,677 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: medef-alsace.com: None
+2026-03-12 00:03:32,127 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: intersport-rent.fr: None
+2026-03-12 00:03:33,274 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: daikin.ge: None
+2026-03-12 00:03:34,138 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: besins-healthcare.se: None
+2026-03-12 00:03:34,372 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: linde-gas.at: None
+2026-03-12 00:03:34,451 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: strabag-pfs.com: None
+2026-03-12 00:03:34,515 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: siebtechnik-tema.cn: None
+2026-03-12 00:03:34,571 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: spitex-wiggertal.ch: None
+2026-03-12 00:03:35,811 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: autosecuritas-barlin.fr: None
+2026-03-12 00:03:35,940 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: santillana.com.hn: None
+2026-03-12 00:03:36,322 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: nutriciababy.be: None
+2026-03-12 00:03:37,412 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: engie.pt: None
+2026-03-12 00:03:38,023 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: meggle-bakery.com: None
+2026-03-12 00:03:38,593 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamcocatonsvillemd.com: None
+2026-03-12 00:03:38,665 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: adra.org.pe: None
+2026-03-12 00:03:39,333 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: subaru.nc: None
+2026-03-12 00:03:39,364 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: pcllawyersfrankston.com.au: None
+2026-03-12 00:03:39,618 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: culliganwi.com: None
+2026-03-12 00:03:40,462 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: aamco-councilbluffs.com: None
+2026-03-12 00:03:41,194 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: rsmthailand.com: None
+2026-03-12 00:03:44,183 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: adecco.cl: None
+2026-03-12 00:03:44,328 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: renaultchiva.com: None
+2026-03-12 00:03:44,410 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-blank-dinkelsbuehl.de: None
+2026-03-12 00:03:44,794 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: nestle.com.vn: None
+2026-03-12 00:03:44,812 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: inductotherm.co.kr: None
+2026-03-12 00:03:45,046 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazda-autohaus-sturne-rochlitz.de: None
+2026-03-12 00:03:45,716 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: renault.dk: None
+2026-03-12 00:03:45,826 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: veolia.ca: None
+2026-03-12 00:03:48,145 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: wurth.com.uy: None
+2026-03-12 00:03:48,297 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: mazdabali.co.id: None
+2026-03-12 00:03:48,614 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: vitalimages.com: None
+2026-03-12 00:03:51,577 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: amnesty.is: None
+2026-03-12 00:03:54,735 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: engie.cl: None
+2026-03-12 00:04:02,588 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: meggle.co.jp: None
+2026-03-12 00:04:03,205 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: veolia.fr: None
+2026-03-12 00:04:03,628 | In file: main.py, Function: extractData, Line: 33 | ERROR | intertongn.es: Failed to load page: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+2026-03-12 00:04:10,902 | In file: main.py, Function: extractData, Line: 35 | INFO | OK: nestle.ch: None
+2026-03-12 00:05:19,594 | In file: main.py, Function: extractData, Line: 33 | ERROR | ford.pl.ua: Failed to load page: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+2026-03-12 00:05:19,910 | In file: main.py, Function: extractData, Line: 33 | ERROR | crocs.co.id: Failed to load page: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+2026-03-12 00:07:04,527 | In file: main.py, Function: extractData, Line: 33 | ERROR | noiseassessments.org: Failed to load page: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+2026-03-12 00:07:04,531 | In file: main.py, Function: extractData, Line: 41 | INFO | 
+Done. 141 logos found out of 150

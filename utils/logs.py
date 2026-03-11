@@ -6,7 +6,10 @@ LOG_FORMAT = (
     "| %(levelname)s | %(message)s"
 )
 
-def setup_logging(filename: str = "scrapping.log", filemode: str = "w") -> Path:
+
+def setup_logging(filename: str = "scrapping.log", filemode: str = "w") -> None:
+    "Function to edit logs filepath"
+
     log_path = Path(filename)
 
     logging.getLogger().handlers.clear()
@@ -17,4 +20,3 @@ def setup_logging(filename: str = "scrapping.log", filemode: str = "w") -> Path:
         level=logging.INFO,
         format=LOG_FORMAT,
     )
-    return log_path

@@ -465,10 +465,23 @@ def download_logo(logo_url: str, filename: str, referer: str = None):
             session.cookies.set(name, value)
         response = session.get(logo_url, headers=headers, timeout=10, stream=True, allow_redirects=True)
         if response.status_code == 200:
-            with open(filename, "wb") as f:
+            # Derive extension from URL, fall back to Content-Type
+            url_ext = "." + logo_url.rsplit(".", 1)[-1].split("?")[0].lower() if "." in logo_url else ""
+            content_type = response.headers.get("Content-Type", "")
+            ct_map = {
+                "image/svg+xml": ".svg", "image/png": ".png", "image/jpeg": ".jpg",
+                "image/webp": ".webp", "image/gif": ".gif",
+                "image/x-icon": ".ico", "image/vnd.microsoft.icon": ".ico",
+            }
+            ct_ext = next((v for k, v in ct_map.items() if k in content_type), "")
+            trusted = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico"}
+            ext = url_ext if url_ext in trusted else ct_ext or url_ext
+            actual_filename = filename.rsplit(".", 1)[0] + ext if ext else filename
+            with open(actual_filename, "wb") as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
             return
+
         print(f"  requests download failed ({response.status_code}), trying Playwright...")
     except Exception as e:
         print(f"  requests download failed ({e}), trying Playwright...")

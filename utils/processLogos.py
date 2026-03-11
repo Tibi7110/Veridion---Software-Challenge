@@ -1,7 +1,7 @@
 from scripts.transform import process_logo
 
 def processLogos(p):
-    print(f"Processing {p.name}...")
+    "Wrapper for processing"
     try:
         result = process_logo(str(p))
         return (p.stem, result, None)
