@@ -64,6 +64,7 @@ def process_logo(path: str):
     return {"bw": bw.astype(np.uint8), "phash": ph}
 
 def save_debug_masks(processed: dict, output_folder: Path, n: int = 10):
+    
     for i, (name, data) in enumerate(processed.items()):
         if i >= n:
             break

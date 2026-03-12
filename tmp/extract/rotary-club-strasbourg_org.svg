@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1" baseProfile="tiny"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="130px" height="133px" viewBox="-0.036 -0.305 130 133" xml:space="preserve">
+<defs>
+</defs>
+<path fill="#019FCB" d="M64.75,132.287C29.047,132.287,0,103.24,0,67.537C0,39.062,19.102,13.53,46.379,5.448
+	c0,0,0.013,16.915,0,16.92C28.292,29.75,16,47.698,16,67.537c0,26.881,21.869,48.75,48.75,48.75
+	c26.882,0,48.751-21.869,48.751-48.75c0-19.878-12.189-37.701-30.244-45.117c0-1.212-0.031-16.957-0.014-16.952
+	c27.215,8.115,46.258,33.495,46.258,62.069C129.501,103.24,100.455,132.287,64.75,132.287L64.75,132.287z"/>
+<polygon fill="#019FCB" points="72.75,70.75 56.75,70.75 56.75,0 72.75,0 72.75,70.75 "/>
+</svg>

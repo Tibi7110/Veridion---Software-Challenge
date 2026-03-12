@@ -1,8 +1,8 @@
 ---
 MAX_Threads: 25
 MAX_CPUS: 8
-scrapping_path: "/home/tibi/Proiecte/Veridion/data/logs/scrapping_info.logs"
-proccesing_path: "/home/tibi/Proiecte/Veridion/data/logs/proccesing_info.logs"
-extract_folder: "/home/tibi/Proiecte/Veridion/tmp/extract/"
-transform_folder: "/home/tibi/Proiecte/Veridion/tmp/transform/"
+scrapping_path: "./data/logs/scrapping_info.logs"
+proccesing_path: "./data/logs/proccesing_info.logs"
+extract_folder: "./tmp/extract/"
+transform_folder: "./tmp/transform/"
 ...

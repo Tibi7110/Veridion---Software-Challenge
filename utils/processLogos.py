@@ -6,4 +6,4 @@ def processLogos(p):
         result = process_logo(str(p))
         return (p.stem, result, None)
     except Exception as e:
-        return (p.stem, None, e)
+        return (p.stem, None, str(e))

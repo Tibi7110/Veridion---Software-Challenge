@@ -5,8 +5,6 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 import json
 import re
 import base64
-import cairosvg
-
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -22,8 +20,8 @@ def resolve_final_url(url: str) -> str:
         resp = requests.get(url, headers=HEADERS, timeout=5, allow_redirects=True)
         final = resp.url
         parsed = urlparse(final)
-        if (parsed.scheme == "https" and parsed.port == 443) or \
-           (parsed.scheme == "http" and parsed.port == 80):
+        if (parsed.scheme == "https" and parsed.port == 443) or (parsed.scheme
+            == "http" and parsed.port == 80):
             final = parsed._replace(netloc=parsed.hostname).geturl()
         if final != url:
             print(f"  Resolved {url} -> {final}")
@@ -63,7 +61,7 @@ def extract_canonical_url(soup: BeautifulSoup, base_url: str) -> str | None:
 
 TRUSTED_EXTENSIONS = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".gif"}
 
-def is_url_accessible(url: str, referer: str = None) -> bool:
+def is_url_accessible(url: str, referer: str = "") -> bool:
     if not url or url.startswith("data:"):
         return True
     
@@ -300,6 +298,7 @@ def extract_logo(url: str) -> str | None:
 
     # 1. <img> tags scored by logo-related attributes
     logo_candidates = []
+    src = None
     for img in soup.find_all("img"):
         score = 0
         attrs = " ".join([
