@@ -60,8 +60,6 @@ def extract_css_logo(soup: BeautifulSoup, base_url: str) -> str | None:
                 candidate = absolute_url(css_url, result)
                 if candidate and is_url_accessible(candidate, referer=base_url):
                     return candidate
-                if candidate:
-                    print(f"  CSS logo not accessible ({candidate}), trying next strategy...")
         except Exception:
             continue
 
@@ -148,7 +146,6 @@ def extract_img_logo(soup: BeautifulSoup, url: str) -> str | None:
         candidate = absolute_url(url, src)
         if candidate and is_url_accessible(candidate, referer=url):
             return candidate
-        print(f"  img candidate not accessible ({candidate}), skipping...")
 
     header = soup.find("header")
     if header:
@@ -173,6 +170,5 @@ def extract_og_logo(soup: BeautifulSoup, url: str) -> str | None:
         candidate = absolute_url(url, content)
         if candidate and is_url_accessible(candidate, referer=url):
             return candidate
-        print(f"  og:image not accessible ({candidate}), trying next strategy...")
 
     return None

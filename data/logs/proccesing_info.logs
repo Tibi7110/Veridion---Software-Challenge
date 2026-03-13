@@ -1,0 +1,131 @@
+2026-03-13 20:01:45,586 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: nobleprog_mx — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,587 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: santillana_com_hn — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,588 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: veolia_com_ru — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,588 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: flashbay_ca — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,588 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: wurthsaudi_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,588 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: cvjm-pfalz_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,589 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: peugeot_sk — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,589 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mapfre_pr — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,590 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-sturne-rochlitz_de — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,590 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: bauder_at — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,590 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-kaschmieder-waren_de — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,590 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: secureparkinghi_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,590 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: williamblairfunds_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,591 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: meggle_co_jp — not well-formed (invalid token): line 1, column 6
+2026-03-13 20:01:45,647 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: sephora_pl — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,648 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: pingusenglish_com_tr — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,650 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: einhell_ba — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,650 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: chip_pl — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,652 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-lackmann-sendenhorst_de — not well-formed (invalid token): line 1, column 6
+2026-03-13 20:01:45,652 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: axabreakdown_co_uk — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,652 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: bmw-motorrad-euromotos-lyon_fr — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,654 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: wurth-international_com_cn — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,654 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,654 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcoseguin_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,655 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: kia-gorny-eislingen_de — syntax error: line 1, column 0
+2026-03-13 20:01:45,655 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: deheus_com_vn — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,656 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: kierpensions_co_uk — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,656 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: baywa-re_es — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,658 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcodelran_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,659 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: rsmthailand_com — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,659 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: freseniusmedicalcare_ca — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,660 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: engie_cl — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,660 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: zkteco_vn — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,660 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: zktecoma_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,663 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: cafelasmargaritas_es — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,663 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: europa-union-sachsen-anhalt_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,664 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: kia-moeller-wunstorf_de — syntax error: line 1, column 0
+2026-03-13 20:01:45,664 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: linde-gas_at — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,664 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcoconyersga_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,668 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: amnesty_is — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,669 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcopasadenatx_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,669 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: zalando_cz — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,669 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: daikin_com_sg — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,669 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: ccusa_com_au — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,679 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcocatonsvillemd_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,680 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: linde-electronics_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,680 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: taylorfarmsdeli_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,681 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: modshair-nuernberg_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,681 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: besins-healthcare_se — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,681 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: zalando_dk — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,682 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-blank-dinkelsbuehl_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,682 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: stanbicbank_co_zw — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,686 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: ccusa_co_nz — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,688 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: renaultsanzhispano_es — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,689 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-poznan-voyager_pl — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,690 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: julis-sh_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,691 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcowilliamsportpa_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,691 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcotulsa-memorial_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,692 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazdabali_co_id — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,692 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcobloomfield_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,694 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: equans_hu — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,694 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mooresingapore_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,695 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcoanaheim_net — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,695 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: actemium_ch — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,698 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: pirtek_be — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,699 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: renaulttersa_com_mx — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,699 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: catsprotectionshop_co_uk — syntax error: line 1, column 0
+2026-03-13 20:01:45,699 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: autosecuritas-ct-seysses_fr — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,700 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: linexps_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,701 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: intertongn_es — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,702 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: linde-gas_fi — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,702 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: fleishmanhillard_cn — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,703 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: strabag-pfs_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,703 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: oil-testing_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,704 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: cdu-aldenhoven_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,704 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: subaru_nc — syntax error: line 1, column 0
+2026-03-13 20:01:45,705 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-wassing-ahaus-wuellen_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,705 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: ymcasteuben_org — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,705 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: astrazeneca_ua — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,705 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-becker-homburg-bruchhof_de — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,706 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: autosecuritas-barlin_fr — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,706 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: engie_pt — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,707 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: subaru_jp — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,707 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamcosalemor_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,708 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: ccusa_hu — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,710 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: trinkgutlippstadt_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,711 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: avia_ch — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,712 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: webster_nl — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,712 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: greatplacetowork_com_bo — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,713 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: savethechildren_ca — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,713 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: vkf-renzel_com_tr — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,713 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: bakertilly_com_pa — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,714 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: compo_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,714 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-hansmann-kassel_de — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,714 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: adra_org_pe — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,715 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: isover_hu — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,715 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: esseskincare_sg — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,715 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: svntrinity_com — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,716 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: menicon_de — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,719 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mateco_nl — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,720 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: veolia_ca — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,721 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: ebay_cn — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,721 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: rsmpoland_pl — not well-formed (invalid token): line 1, column 5
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: urmet_com_br — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: mazda-autohaus-roessel-birkenau_de — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: meggle-bakery_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: orient-food_sk — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: linde_pe — not well-formed (invalid token): line 1, column 4
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: rheine_schule — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: grantthornton_com_sv — The SVG size is undefined
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: kia-suedmobile-radolfzell_de — syntax error: line 1, column 0
+2026-03-13 20:01:45,722 | In file: main.py, Function: proccesData, Line: 60 | ERROR | SKIPPED: aamco-councilbluffs_com — not well-formed (invalid token): line 1, column 0
+2026-03-13 20:01:45,957 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/ecslupsk_pl.svg <-> tmp/extract/engie_co_uk.svg | hamming=4 | mse=0.08
+2026-03-13 20:01:45,983 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_ci.svg <-> tmp/extract/bakertilly_es.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:45,984 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_ci.svg <-> tmp/extract/bakertilly_lu.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:45,994 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_ci.svg <-> tmp/extract/bakertilly_ky.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,074 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/renaultrycauto_es.svg <-> tmp/extract/renaultmerida_com_mx.svg | hamming=8 | mse=0.01
+2026-03-13 20:01:46,079 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/renaultrycauto_es.svg <-> tmp/extract/renaultchiva_com.svg | hamming=8 | mse=0.05
+2026-03-13 20:01:46,083 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/renaultrycauto_es.svg <-> tmp/extract/renault-tortosa_es.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,198 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/daikin-ksa_com.svg <-> tmp/extract/daikin_ge.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,208 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/daikin-ksa_com.svg <-> tmp/extract/daikinkuwait_com.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,229 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_es.svg <-> tmp/extract/bakertilly_lu.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,240 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_es.svg <-> tmp/extract/bakertilly_ky.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,277 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/bakertilly_lu.svg <-> tmp/extract/bakertilly_ky.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,321 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/lidl_lt.svg <-> tmp/extract/lidl_com_cy.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,450 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/wurth_com_uy.svg <-> tmp/extract/wurth-international_com.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:46,856 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/daikin_ge.svg <-> tmp/extract/daikinkuwait_com.svg | hamming=0 | mse=0.00
+2026-03-13 20:01:47,104 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/renaultmerida_com_mx.svg <-> tmp/extract/renault-tortosa_es.svg | hamming=8 | mse=0.01
+2026-03-13 20:01:47,405 | In file: comparePairs.py, Function: comparePairs, Line: 51 | INFO | SIMILAR: tmp/extract/renaultchiva_com.svg <-> tmp/extract/renault-tortosa_es.svg | hamming=8 | mse=0.05
+2026-03-13 20:01:47,687 | In file: main.py, Function: proccesData, Line: 69 | INFO | 
+Done. Found 17 similar pairs out of 1596 total.

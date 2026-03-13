@@ -12,7 +12,6 @@ def fetch_html(url: str):
 
     resolved = resolve_final_url(url)
     if resolved != url:
-        print(f"  Pre-resolved redirect: {url} -> {resolved}")
         url = resolved
 
     with sync_playwright() as p:
@@ -33,14 +32,12 @@ def fetch_html(url: str):
                 "ERR_NAME_NOT_RESOLVED"
             )) and not parsed.netloc.startswith("www."):
                 www_url = f"{parsed.scheme}://www.{parsed.netloc}{parsed.path}"
-                print(f"  Retrying with www: {www_url}")
                 try:
                     html = _try_fetch(browser, www_url)
                 except PlaywrightError as e2:
                     raise ValueError(f"Failed to load page (www fallback also failed): {e2}")
             elif "ERR_NAME_NOT_RESOLVED" in error_str and not parsed.netloc.startswith("www."):
                 www_url = f"{parsed.scheme}://www.{parsed.netloc}{parsed.path}"
-                print(f"  Retrying with www: {www_url}")
                 try:
                     html = _try_fetch(browser, www_url)
                 except PlaywrightError as e2:
@@ -111,7 +108,6 @@ def _try_fetch(browser, url: str) -> str:
                     btn = page.wait_for_selector(selector, timeout=1000)
                     if btn:
                         btn.click()
-                        print(f"  Dismissed consent wall via: {selector}")
                         page.wait_for_timeout(1500)
                         break
                 except PlaywrightTimeoutError:
@@ -136,7 +132,6 @@ def _try_fetch(browser, url: str) -> str:
 def extract_logo(url: str) -> str | None:
     resolved = resolve_final_url(url)
     if resolved != url:
-        print(f"  Using resolved URL for scraping: {resolved}")
         url = resolved
 
     soup = fetch_html(url)
@@ -147,7 +142,6 @@ def extract_logo(url: str) -> str | None:
         current_netloc = urlparse(url).netloc
         # Only re-fetch if canonical is on a genuinely different domain AND not already visited
         if canonical_netloc != current_netloc and canonical != url:
-            print(f"  Canonical URL points elsewhere: {canonical}, re-fetching...")
             url = canonical
         # If same domain but different path, just update base url for absolute_url resolution
         elif canonical_netloc == current_netloc and canonical != url:
@@ -165,7 +159,6 @@ def extract_logo(url: str) -> str | None:
 
     favicon = extract_favicon(soup, url)
     if favicon and is_url_accessible(favicon, referer=url):
-        print(f"  Using favicon as fallback: {favicon}")
         return favicon
 
     return None
@@ -228,7 +221,6 @@ def download_logo(logo_url: str, filename: str, referer: str = None):
                     f.write(chunk)
             return
 
-        print(f"  requests download failed ({response.status_code}), trying Playwright...")
     except Exception as e:
         print(f"  requests download failed ({e}), trying Playwright...")
 

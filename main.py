@@ -20,7 +20,7 @@ def extractData():
     os.makedirs(config['extract_folder'], exist_ok=True)
     ####
 
-    domains = df["domain"].dropna().tolist()
+    domains = df["domain"].dropna().head(200).tolist()
     results = []
     ### Multi-thread the scraping
     setup_logging(config['scrapping_path'])
