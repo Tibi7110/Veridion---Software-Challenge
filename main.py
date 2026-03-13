@@ -1,9 +1,9 @@
-import logging
-import shutil
-import os
-import time
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+import logging
+import os
 from pathlib import Path
+import time
+import shutil
 
 import pyarrow.parquet as pq
 import yaml
@@ -20,7 +20,7 @@ def extractData():
     os.makedirs(config['extract_folder'], exist_ok=True)
     ####
 
-    domains = df["domain"].dropna().tolist()
+    domains = df["domain"].dropna().head(125).tolist()
     results = []
     ### Multi-thread the scraping
     setup_logging(config['scrapping_path'])

@@ -45,8 +45,7 @@ def process_logo(path: str):
     "Load a logo, convert to a normalised black and white mask, and compute its phash."
 
     raw = Path(path).read_bytes()
-    if path.lower().endswith(".svg") or b"<svg" in raw[:1024]: # SVGs are reinstated via cairosvg
-        raw = cairosvg.svg2png(bytestring=raw)
+    raw = cairosvg.svg2png(bytestring=raw)
 
     if not raw:
         raise ValueError(f"Wrong path: {path}")

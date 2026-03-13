@@ -1,95 +1,10 @@
-import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError, Error as PlaywrightError
-import json
-import re
 import base64
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError, Error as PlaywrightError
+import requests
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Connection": "keep-alive",
-}
-
-def resolve_final_url(url: str) -> str:
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=5, allow_redirects=True)
-        final = resp.url
-        parsed = urlparse(final)
-        if (parsed.scheme == "https" and parsed.port == 443) or (parsed.scheme
-            == "http" and parsed.port == 80):
-            final = parsed._replace(netloc=parsed.hostname).geturl()
-        if final != url:
-            print(f"  Resolved {url} -> {final}")
-        return final
-    except Exception:
-        return url
-    
-
-INVALID_CANONICAL_HOSTS = {
-    "localhost", "127.0.0.1", "0.0.0.0", "::1",
-}
-
-def extract_canonical_url(soup: BeautifulSoup, base_url: str) -> str | None:
-    canonical = soup.find("link", rel="canonical")
-    if canonical and canonical.get("href"):
-        resolved = absolute_url(base_url, canonical["href"])
-        parsed = urlparse(resolved)
-        if parsed.hostname in INVALID_CANONICAL_HOSTS:
-            return None
-        if parsed.hostname and (
-            parsed.hostname.startswith("192.168.") or
-            parsed.hostname.startswith("10.") or
-            parsed.hostname.startswith("172.")
-        ):
-            return None
-        return resolved
-
-    og_url = soup.find("meta", property="og:url")
-    if og_url and og_url.get("content"):
-        resolved = absolute_url(base_url, og_url["content"])
-        parsed = urlparse(resolved)
-        if parsed.hostname in INVALID_CANONICAL_HOSTS:
-            return None
-        return resolved
-
-    return None
-
-TRUSTED_EXTENSIONS = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".gif"}
-
-def is_url_accessible(url: str, referer: str = "") -> bool:
-    if not url or url.startswith("data:"):
-        return True
-    
-    # Trust same-domain URLs with known image extensions — avoid false negatives
-    # from hotlink protection, bot detection, or cookie walls
-    parsed_url = urlparse(url)
-    parsed_ref = urlparse(referer) if referer else None
-    ext = "." + url.rsplit(".", 1)[-1].split("?")[0].lower() if "." in url else ""
-    
-    if parsed_ref and parsed_url.netloc == parsed_ref.netloc and ext in TRUSTED_EXTENSIONS:
-        return True  # same-domain image — trust it, let download_logo handle failures
-
-    try:
-        headers = {**HEADERS}
-        if referer:
-            headers["Referer"] = referer
-        resp = requests.get(url, headers=headers, timeout=10, allow_redirects=True, stream=True)
-        resp.close()
-        return resp.status_code in (200, 206, 304, 406)
-    except Exception:
-        return False
-
-def absolute_url(base_url, path):
-
-    if not path or not isinstance(path, str):
-        return None
-    return urljoin(base_url, path)
-
+from utils.scraping import *
 
 def fetch_html(url: str):
     if url.startswith("http://"):
@@ -218,63 +133,6 @@ def _try_fetch(browser, url: str) -> str:
         context.close()
 
 
-def extract_inline_svg(soup: BeautifulSoup, url: str) -> str | None:
-    """Find inline SVG logos and convert to a data URI or save as file."""
-    
-    # Look for <svg> inside logo-related parent elements
-    for tag in soup.find_all(class_=re.compile(r'logo', re.I)):
-        svg = tag.find("svg")
-        if svg:
-            return "data:image/svg+xml;base64," + base64.b64encode(str(svg).encode()).decode()
-    
-    for tag in soup.find_all(id=re.compile(r'logo', re.I)):
-        svg = tag.find("svg")
-        if svg:
-            return "data:image/svg+xml;base64," + base64.b64encode(str(svg).encode()).decode()
-
-    # Also check <svg> directly with logo-related attributes
-    for svg in soup.find_all("svg"):
-        attrs = " ".join([
-            str(svg.get("id", "")),
-            " ".join(str(c) for c in (svg.get("class") or [])),
-            str(svg.get("aria-label", "")),
-            str(svg.get("title", ""))
-        ]).lower()
-        if "logo" in attrs:
-            return "data:image/svg+xml;base64," + base64.b64encode(str(svg).encode()).decode()
-
-    return None
-
-
-def extract_favicon(soup: BeautifulSoup, url: str) -> str | None:
-    # Prefer high-res touch icons over tiny favicons
-    selectors = [
-        {"rel": "apple-touch-icon"},
-        {"rel": "apple-touch-icon-precomposed"},
-        {"rel": lambda r: r and "icon" in " ".join(r).lower() and "mask" not in " ".join(r).lower()},
-    ]
-    best = (0, None)
-    for attrs in selectors:
-        for link in soup.find_all("link", **attrs):
-            href = link.get("href")
-            if not href:
-                continue
-            sizes = link.get("sizes", "0x0")
-            try:
-                size = int(sizes.split("x")[0]) if sizes != "any" else 999
-            except (ValueError, IndexError):
-                size = 1
-            if size > best[0]:
-                best = (size, absolute_url(url, href))
-    
-    if best[1]:
-        return best[1]
-
-    # Last resort: try /favicon.ico
-    parsed = urlparse(url)
-    return f"{parsed.scheme}://{parsed.netloc}/favicon.ico"
-
-
 def extract_logo(url: str) -> str | None:
     resolved = resolve_final_url(url)
     if resolved != url:
@@ -295,131 +153,20 @@ def extract_logo(url: str) -> str | None:
         elif canonical_netloc == current_netloc and canonical != url:
             url = canonical  # update base URL but don't re-fetch
 
+    for strategy in (
+        extract_img_logo,
+        extract_og_logo,
+        extract_css_logo,
+        extract_inline_svg,
+    ):
+        result = strategy(soup, url)
+        if result:
+            return result
 
-    # 1. <img> tags scored by logo-related attributes
-    logo_candidates = []
-    src = None
-    for img in soup.find_all("img"):
-        score = 0
-        attrs = " ".join([
-            str(img.get("alt", "")),
-            " ".join(str(c) for c in (img.get("class") or [])),
-            str(img.get("id", ""))
-        ]).lower()
-        if "logo" in attrs:
-            score += 50
-        if img.get("src"):
-            src = img["src"]
-            if "logo" in src.lower():
-                score += 30
-        if score > 0:
-            logo_candidates.append((score, src))
-
-    # Try candidates in order of score, skip inaccessible ones
-    for score, src in sorted(logo_candidates, key=lambda x: x[0], reverse=True):
-        candidate = absolute_url(url, src)
-        if candidate and is_url_accessible(candidate, referer=url):
-            return candidate
-        print(f"  img candidate not accessible ({candidate}), skipping...")
-
-    # 2. og:image meta tag
-    og = soup.find("meta", property="og:image")
-    if og and og.get("content"):
-        content = og["content"]
-        if isinstance(content, list):
-            content = content[0]
-        candidate = absolute_url(url, content)
-        if candidate and is_url_accessible(candidate, referer=url):
-            return candidate
-        print(f"  og:image not accessible ({candidate}), trying next strategy...")
-
-
-    # 3. CSS background-image containing "logo"
-    css_logo = extract_logo_from_css(soup, url)
-    if css_logo and is_url_accessible(css_logo, referer=url):
-        return css_logo
-    elif css_logo:
-        print(f"  CSS logo not accessible ({css_logo}), trying next strategy...")
-
-    # 4. Inline SVG logo
-    svg_logo = extract_inline_svg(soup, url)
-    if svg_logo:
-        return svg_logo
-
-    # 5. First <img> inside <header>
-    header = soup.find("header")
-    if header:
-        img = header.find("img")
-        if img and img.get("src"):
-            src = img["src"]
-            if isinstance(src, list):
-                src = src[0]
-            candidate = absolute_url(url, src)
-            if candidate and is_url_accessible(candidate, referer=url):
-                return candidate
-
-    # 6. Favicon as last resort (better than nothing for brand identification)
     favicon = extract_favicon(soup, url)
     if favicon and is_url_accessible(favicon, referer=url):
         print(f"  Using favicon as fallback: {favicon}")
         return favicon
-
-    return None
-
-
-def extract_logo_from_css(soup: BeautifulSoup, base_url: str) -> str | None:
-    bg_url_pattern = re.compile(r'url\(["\']?([^)"\']+)["\']?\)')
-
-    def scan_css_text(css_text: str) -> str | None:
-        """Find a background-image URL containing 'logo' in a block of CSS."""
-        if "logo" not in css_text.lower():
-            return None
-        # Find all url(...) occurrences near the word "logo"
-        for match in bg_url_pattern.finditer(css_text):
-            path = match.group(1).strip()
-            if not path or path.startswith("data:"):
-                continue
-            # Check surrounding context (~200 chars) for "logo"
-            start = max(0, match.start() - 200)
-            end = min(len(css_text), match.end() + 200)
-            context = css_text[start:end].lower()
-            if "logo" in context:
-                return path
-        return None
-
-    # 1. Inline <style> blocks
-    for style_tag in soup.find_all("style"):
-        result = scan_css_text(style_tag.get_text())
-        if result:
-            return absolute_url(base_url, result)
-
-    # 2. Inline style= attributes on logo-related elements
-    for tag in soup.find_all(style=True):
-        attrs = " ".join([
-            " ".join(str(c) for c in (tag.get("class") or [])),
-            str(tag.get("id", ""))
-        ]).lower()
-        if "logo" not in attrs:
-            continue
-        result = scan_css_text(tag["style"])
-        if result:
-            return absolute_url(base_url, result)
-
-    # 3. External stylesheets via <link rel="stylesheet">
-    for link in soup.find_all("link", rel=lambda r: bool(r and "stylesheet" in r)):
-        href = link.get("href")
-        if not href:
-            continue
-        css_url = absolute_url(base_url, href)
-        try:
-            resp = requests.get(css_url, headers=HEADERS, timeout=10)
-            resp.raise_for_status()
-            result = scan_css_text(resp.text)
-            if result:
-                # CSS url() paths are relative to the CSS file's location, not the page
-                return absolute_url(css_url, result)
-        except Exception:
-            continue
 
     return None
 
@@ -485,7 +232,6 @@ def download_logo(logo_url: str, filename: str, referer: str = None):
     except Exception as e:
         print(f"  requests download failed ({e}), trying Playwright...")
 
-    # Fallback: Playwright context.request (CORS-free, shares browser cookies)
     # Fallback: intercept the image by navigating to it within a real page context
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)

@@ -1,7 +1,6 @@
-from scripts import resolve_final_url, extract_logo,download_logo
-
 def process_domain(domain: str) -> tuple[str, str | None, str | None]:
     """Returns (domain, logo_url, error)"""
+    from scripts.scraping import resolve_final_url, extract_logo, download_logo
 
     website = f"https://{domain}"
     try:
