@@ -6,11 +6,6 @@
  - pip install -r requirements.txt
  - python3 main.py
 
- ## SAU
-
- - docker pull tibi7110/veridion-logo-scraper
- - docker run tibi7110/veridion-logo-scraper
-
 
 # Ideea Proiectului:
 
